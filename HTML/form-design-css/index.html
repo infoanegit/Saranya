@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form design</title>
+		<link rel="stylesheet" href="./assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="flex-container ">
+			<h1>Create Account</h1>
+			<form action="url" method="get">
+			<div class="user-details">
+					<div class="rowFlex">
+						<div class="input-details">
+							<label for="fname">First Name *</label>
+							<input type="text" id="fname" name="fname" placeholder="First name" class="box" required style="margin: 3px;">
+						</div>
+						<div class="input-details">    
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lname" placeholder="Last name">
+						</div>
+					</div>
+					<div class="rowFlex">
+						<div class="input-details">
+							<div class="mail">
+								<label for="Email">Email *</label>
+								<input type="email" id="email" name="email" placeholder="Enter your email">
+							</div>
+						</div>
+					</div>
+					<div class="rowFlex">
+						<div class="input-details">
+							<label for="password">Password *</label>
+							<input type="password" id="password" name="password" placeholder="Enter your password">
+						</div>
+						<div class="input-details">
+							<label for="cpassword">Confirm Password *</label>
+							<input type="password" id="cpassword" name="cpassword" placeholder="Enter your password again">
+						</div>
+					</div>
+					<div class="rowFlex">
+						<div class="box"style="margin-left: 12px;">
+							<label for="hobbies"style="color: #45bda2;" >Gender</label><br>
+							<input type="radio" id="Male" name="gender" value="Male">
+							<label for="Male">Male</label>
+							<input type="radio" id="Female" name="gender" value="Female">
+							<label for="Male">Female</label>
+						</div>
+						<div class="box">
+							<label for="hobbies" style="color: #45bda2;font-weight: bold;">Hobbies</label><br>
+							<input type="checkbox" id="hobbies" name="hobby1" value="Music">
+							<label for="hobby1">Music</label>
+							<input type="checkbox" id="hobbies" name="hobby2" value="Sports">
+							<label for="hobby2">Sports</label>
+							<input type="checkbox" id="hobbies" name="hobby3" value="Travel">
+							<label for="hobby3">Travel</label>
+							<input type="checkbox" id="hobbies" name="hobby4" value="Movies">
+							<label for="hobby4">Movies</label>
+						</div>
+					</div>
+					<div class="rowFlex">
+						<div class="s-income">
+							<label for="s-income"style="color: #45bda2; font-weight: bold;">Source Of Income:</label><br>
+							<select id="s-income" name="s-income">
+								<option value="employed">Employed</option>
+								<option value="unemployed">Unemployed</option>
+							</select>
+						</div>
+							<div class="s-income">
+								<label for="income"style="color: #45bda2;font-weight: bold;">Income:</label>
+								<div>
+									<input type="range" id="income" name="income" min="0" max="50">
+									<button type="button">20K</button>
+								</div>
+							</div>
+					</div>
+					<div class="rowFlex">
+						<div class="profile">
+							<label for="profile"style="color: #45bda2; font-weight: bold;">Upload Profile Picture</label><br>
+							<input type="file" id="file" name="file"><br>
+						</div>
+						<div class="profile">
+								<label for="age"style="color: #45bda2; font-weight: bold;">Age:</label><br>
+								<input type="number" id="age" name="age"><br>
+						</div>
+					</div>
+					<div class="rowFlex">
+						<div class="bio">
+							<label for="bio"style="color: #45bda2; font-weight: bold;">Bio</label><br>
+							<textarea name="bio" rows="5" cols="30"></textarea><br>
+						</div> 
+					</div>
+					<div class="Create">
+						<div class="submit">
+							<input type="submit" value="Create">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
