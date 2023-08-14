@@ -3,7 +3,7 @@
     <html>
         <head>
             <title>OddorEven</title>
-            <link rel="stylesheet" href="./assets/css/style.css">
+            <link rel="stylesheet" href="./assets/cs/style.css">
             <script src="./assets/js/jquery.min.js"></script>
             <script src="./assets/js/OddorEven.js"></script>
         </head>
