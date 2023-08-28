@@ -54,8 +54,9 @@
                     <cffile  action="upload" destination="#expandPath('./images')#" filefield="form.Greeting_img" accept=".png,.jpg,.gif" strict="false" result="Greetingimg" nameconflict="makeunique">
 
                     <cfmail  from="saran2505@gmail.com"  subject="Birthdaymail"  to="#email#" server="localhost" type="html">
+                        <cfmailparam file="/#expandPath('./images/#Greetingimg.serverfile#')#">
                         Happy Birthday #Name#.<br>
-                        <cfimage action="writeToBrowser" source="#expandPath('./images/#Greetingimg.serverfile#')#">
+                        <cfimage action="writeToBrowser" source="#expandPath('./images/#Greetingimg.serverfile#')#"> 
                     </cfmail>
                 </cfif>
             </div>
