@@ -182,6 +182,7 @@
                                 $("##Gender").hide();
                             })
                         }
+                        
                         else{
                             $(".submit").on('click',function(){
                                 var Firstname=$("##fname").val();
@@ -193,6 +194,7 @@
                                 var email_regex=/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/;
 
                                 if(Firstname==""){
+                                    
                                     $("##firstn").show();
                                     $("##firstn").text("Enter Firstname").css("color","red");
                                     return false;
