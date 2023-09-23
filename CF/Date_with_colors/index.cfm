@@ -6,29 +6,29 @@
             <link rel="stylesheet" href="./assets/css/style.css">
         </head>
         <body>
-            <div class="container p-5 mt-5 w-50" style="border: 20px solid ##4b0471;background-color:slateblue;">
+            <div class="container p-5 mt-5 w-50" style="border: 20px solid ##710404;background-color:hsl(302, 73%, 90%)">
                 <div class="row align-items-start">
-                    <div class="text-center fs-2 fw-bold my-1" style="color:aliceblue;font-family: Arial, Helvetica, sans-serif;"><u>Date with colors</u></div>
+                    <div class="text-center fs-2 fw-bold my-1" style="color:rgb(124, 180, 229);font-family: Arial, Helvetica, sans-serif;"><u>Date with colors</u></div>
                 </div>
                 <cfset today=now()>
                 <cfset date=#datePart('d',today)#>
                 <cfset todaymonth= #datePart("m",today )#>
-                <cfset today_day= #datePart("w", today)#>
+                <cfset today_day= #datePart("w", today)#> 
                 <cfset today_year=#datePart("yyyy", today)#>
                 
                 <cfset month_as_string=monthAsString(todaymonth)>
                 <cfset daysInmonth=daysInMonth(today)>
-                
                 <cfset remaining=daysInMonth-date>
-                <cfset lastday=today_day+remaining>
-                <cfset daysAsstring=dayOfWeekAsString(lastday)>  
+                <cfset lastday=today_day+remaining-7>
+                <cfset daysAsstring=dayOfWeekAsString(lastday)> 
+                
                 <cfif today_day LT 4>
                     <cfset diff=4-today_day>
                 <cfelse>
                     <cfset diff=today_day-4>
                 </cfif>
                 
-                <cfset Add=date+diff-7>
+                <cfset Add=date+diff-6>
                 <cfset lastwed=dateFormat(createDate(today_year, todaymonth, Add),"long")>
 
                 
@@ -42,18 +42,18 @@
                 <div class="row mb-3 mt-5">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
-                        <p style="color:white;" class="text-center">Today's Date: #dateFormat(today,"long")#</p>
-                        <p style="color:white;"class="text-center">Current month in numeric: #datePart("m", today)#</p>
-                        <p style="color:white;" class="text-center">Current month in word:  #month_as_string#</p>
-                        <p style="color:white;" class="text-center">Last Wednesday Date: #lastwed#</p>
-                        <p style="color:white;" class="text-center">Last Day of Month: #daysAsstring# </p>
+                        <p style="color:rgb(246, 13, 13);" class="text-center">Today's Date: #dateFormat(today,"long")#</p>
+                        <p style="color:rgb(246, 13, 13);"class="text-center">Current month in numeric: #datePart("m", today)#</p>
+                        <p style="color:rgb(246, 13, 13);" class="text-center">Current month in word:  #month_as_string#</p>
+                        <p style="color:rgb(246, 13, 13);" class="text-center">Last Wednesday Date: #lastwed#</p>
+                        <p style="color:rgb(246, 13, 13);" class="text-center">Last Day of Month: #daysAsstring# </p>
                     </div>
                 </div>
 
                 <div class="row mb-3 mt-5">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
-                        <p class="text-center fs-5 fw-bold my-1 mb-5"style="color:aliceblue;font-family: Arial, Helvetica, sans-serif;"><u>Last 5 days Date and Day:</u></p>
+                        <p class="text-center fs-5 fw-bold my-1 mb-5"style="color:rgb(124, 180, 229);font-family: Arial, Helvetica, sans-serif;"><u>Last 5 days Date and Day:</u></p>
                         <p class="#lcase(dayOfWeekAsString(dayOfWeek(day1)))# text-center">#day1#</p>
                         <p class="#lcase(dayOfWeekAsString(dayOfWeek(day2)))# text-center">#day2#</p>
                         <p class="#lcase(dayOfWeekAsString(dayOfWeek(day3)))# text-center">#day3#</p>
